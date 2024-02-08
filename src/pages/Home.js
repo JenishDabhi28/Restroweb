@@ -5,6 +5,7 @@ import Banner from "../images/banner.jpg";
 import "../styles/HomeStyles.css";
 
 
+
 const Home = () => {
   return (
     <Layout>
