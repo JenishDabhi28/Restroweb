@@ -45,7 +45,7 @@ const Login = () => {
   const handleLogout = () => {
     logout();
     
-    localStorage.removeItem('userToken'); // Assuming you stored a token in local storage
+    localStorage.removeItem('userToken');
   };
 
   return (

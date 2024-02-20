@@ -32,10 +32,10 @@ const About = () => {
             fontFamily: "'Marianda', cursive",
             lineHeight: "1.5",
             maxWidth: "1000px", // Limit the text width
-            margin: "20px 0", // Add margin to the text
+            margin: "20px 0", 
           },
           "@media (max-width:1000px)": {
-            mt: theme.spacing(5), // Apply margin top for screens <= 600px
+            mt: theme.spacing(5), 
             "& h4": {
               fontSize: "1.5rem",
             },

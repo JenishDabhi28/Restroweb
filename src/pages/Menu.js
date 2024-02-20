@@ -40,7 +40,8 @@ const Menu = () => {
   return (
     <Layout>
       <div style={{ padding: '20px', backgroundColor: '#f0f0f0' }}>
-        <Typography variant="h4" style={{ marginBottom: '20px', marginTop: '25px', textAlign: 'center' }}>Menu</Typography>
+      <Typography variant="h4" style={{ marginBottom: '20px', marginTop: '25px', textAlign: 'center', paddingTop: '20px', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)', fontSize: '32px', fontWeight: 'bold', fontStyle: 'italic' }}>Menu</Typography>
+
         <Grid container spacing={3}>
           {MenuList.map((item) => (
             <Grid item key={item.id} xs={12} sm={6} md={4}>
