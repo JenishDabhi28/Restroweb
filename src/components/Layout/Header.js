@@ -1,5 +1,5 @@
-import React, { useState} from "react";
-import { AppBar, Box, Divider, Drawer, IconButton, Toolbar, Typography } from "@mui/material";
+import React, { useState } from "react";
+import { AppBar, Box, Divider, Drawer, IconButton, Toolbar, Typography, Button } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import Logo from "../../images/ll.png";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -8,7 +8,7 @@ import { useAuth } from "../../pages/AuthContext";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { isLoggedIn, logout } = useAuth(); // New: Get isLoggedIn state from context
+  const { isLoggedIn, logout } = useAuth(); // Get isLoggedIn state from context
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -41,16 +41,18 @@ const Header = () => {
         </li>
         {isLoggedIn ? (
           <li>
-            <button  variant="contained" color="primary" onClick={handleLogout}>Logout</button>
+            <button variant="contained" color="primary" onClick={handleLogout}>Logout</button>
           </li>
         ) : (
-          <li>
+          <li variant="contained">
             <NavLink to={"/login"}>Login</NavLink>
           </li>
         )}
-        <li>
-          <NavLink to={"/registration"}>Registration</NavLink>
-        </li>
+        {!isLoggedIn && ( // Conditionally render the Registration link only if user is not logged in
+          <li>
+            <NavLink to={"/registration"}>Registration</NavLink>
+          </li>
+        )}
       </ul>
     </Box>
   );
@@ -93,16 +95,18 @@ const Header = () => {
                 </li>
                 {isLoggedIn ? (
                   <li>
-                    <button variant="h4" color="primary" onClick={handleLogout}>Logout</button>
+                    <Button className="success" variant="contained" color="primary" onClick={handleLogout}>Logout</Button>
                   </li>
                 ) : (
-                  <li>
-                    <NavLink to={"/login"}>Login</NavLink>
+                  <li variant="contained">
+                    <NavLink to={"/login"}><Button className="success" variant="contained" color="primary">Login</Button></NavLink>
                   </li>
                 )}
-                <li>
-                  <NavLink to={"/registration"}>Registration</NavLink>
-                </li>
+                {!isLoggedIn && ( // Conditionally render the Registration link only if user is not logged in
+                  <li>
+                    <NavLink to={"/registration"}><Button className="success" variant="contained" color="primary">Signup</Button></NavLink>
+                  </li>
+                )}
               </ul>
             </Box>
           </Toolbar>

@@ -60,8 +60,7 @@ const Contact = () => {
   return (
     <Layout>
       <Box
-        sx={{
-          backgroundColor: "#f0f0f0", 
+        sx={{ 
           my: 3,
           mx: 4,
           marginTop: 7, 
