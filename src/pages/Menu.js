@@ -46,7 +46,8 @@ const Menu = () => {
           {MenuList.map((item) => (
             <Grid item key={item.id} xs={12} sm={6} md={4}>
               <Paper elevation={3} style={{ padding: '20px', height: '100%' }}>
-                <CardMedia component="img" image={item.image} alt={item.name} style={{ width: '100%', marginBottom: '10px' }} />
+              <CardMedia component="img" image={item.image} alt={item.name} style={{ width: '100%', height: '250px', objectFit: 'cover', marginBottom: '10px' }} />
+
                 <Typography variant="h6" style={{ marginBottom: '10px', textAlign: 'center' }}>{item.name}</Typography>
                 <Typography variant="body1" style={{ marginBottom: '10px', textAlign: 'center' }}>Price: {item.price}</Typography>
                 <Typography variant="body2" style={{ marginBottom: '10px', textAlign: 'center' }}>{item.description}</Typography>
