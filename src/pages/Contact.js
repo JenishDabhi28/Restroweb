@@ -61,7 +61,7 @@ const Contact = () => {
     <Layout>
       <Box
         sx={{
-          backgroundColor: "#f0f0f0", // Professional background color
+          backgroundColor: "#f0f0f0", 
           my: 3,
           mx: 4,
           marginTop: 7, 
