@@ -41,7 +41,7 @@ const Header = () => {
         </li>
         {isLoggedIn ? (
           <li>
-            <button variant="contained" color="primary" onClick={handleLogout}>Logout</button>
+            <button variant="contained" color="primary" onClick={handleLogout}><Button className="success" variant="contained" color="primary">Logout</Button></button>
           </li>
         ) : (
           <li variant="contained">
